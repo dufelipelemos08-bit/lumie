@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMIÉ — Pequenos detalhes. Grandes descobertas.</title>
+<meta name="description" content="LUMIÉ — uma seleção especial para deixar seu dia ainda melhor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="announcement">FRETE GRÁTIS acima de R$ 199</div>
+
+<header class="header">
+  <a class="logo" href="#">LUMIÉ</a>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#novidades">Novidades</a>
+    <a href="#mais-vendidos">Mais vendidos</a>
+    <a href="#categorias">Categorias</a>
+  </nav>
+  <div class="actions">
+    <button aria-label="Buscar" onclick="openSearch()">⌕</button>
+    <button aria-label="Conta">♙</button>
+    <button aria-label="Carrinho" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <p class="eyebrow">CURADORIA LUMIÉ</p>
+    <h1>Pequenos detalhes.<br><em>Grandes descobertas.</em></h1>
+    <p>Uma seleção especial de produtos para deixar seu dia ainda melhor.</p>
+    <a class="btn" href="#mais-vendidos">COMPRAR AGORA</a>
+  </div>
+  <div class="hero-art">
+    <div class="orb orb1"></div><div class="orb orb2"></div>
+    <div class="product product-a">L</div>
+    <div class="product product-b">✦</div>
+    <div class="product product-c">◌</div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><strong>✦ Compra segura</strong><span>Pagamento protegido</span></div>
+  <div><strong>↗ Envio para todo Brasil</strong><span>Acompanhe seu pedido</span></div>
+  <div><strong>♡ Curadoria especial</strong><span>Produtos escolhidos a dedo</span></div>
+</section>
+
+<section class="section" id="mais-vendidos">
+  <div class="section-head">
+    <div><p class="eyebrow">ESCOLHIDOS PARA VOCÊ</p><h2>Destaques da semana</h2></div>
+    <a href="#">Ver todos →</a>
+  </div>
+  <div class="products">
+    <article class="card">
+      <div class="pic pic1"><span>◌</span></div><p class="tag">MAIS VENDIDO</p>
+      <h3>Glow Compact</h3><p class="price">R$ 79,90</p><button onclick="addCart('Glow Compact')">Adicionar ao carrinho</button>
+    </article>
+    <article class="card">
+      <div class="pic pic2"><span>✦</span></div>
+      <h3>Essence Home</h3><p class="price">R$ 89,90</p><button onclick="addCart('Essence Home')">Adicionar ao carrinho</button>
+    </article>
+    <article class="card">
+      <div class="pic pic3"><span>L</span></div><p class="tag">NOVIDADE</p>
+      <h3>Lumié Accessory</h3><p class="price">R$ 59,90</p><button onclick="addCart('Lumié Accessory')">Adicionar ao carrinho</button>
+    </article>
+    <article class="card">
+      <div class="pic pic4"><span>◇</span></div>
+      <h3>Daily Chic</h3><p class="price">R$ 69,90</p><button onclick="addCart('Daily Chic')">Adicionar ao carrinho</button>
+    </article>
+  </div>
+</section>
+
+<section class="categories" id="categorias">
+  <div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Encontre o seu favorito</h2></div></div>
+  <div class="cat-grid">
+    <a class="cat cat1" href="#">Beleza <span>→</span></a>
+    <a class="cat cat2" href="#">Casa <span>→</span></a>
+    <a class="cat cat3" href="#">Acessórios <span>→</span></a>
+    <a class="cat cat4" href="#">Tecnologia <span>→</span></a>
+  </div>
+</section>
+
+<section class="newsletter" id="novidades">
+  <div><p class="eyebrow">NOVIDADES LUMIÉ</p><h2>Descubra primeiro.</h2><p>Receba novidades e ofertas especiais diretamente no seu e-mail.</p></div>
+  <form onsubmit="subscribe(event)"><input type="email" placeholder="Seu melhor e-mail" required><button class="btn">QUERO RECEBER</button></form>
+</section>
+</main>
+
+<footer><div class="logo">LUMIÉ</div><p>Pequenos detalhes. Grandes descobertas.</p><div class="footer-links"><a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#">Políticas</a><a href="#">Contato</a></div><small>© 2026 LUMIÉ. Todos os direitos reservados.</small></footer>
+
+<div class="overlay" id="searchOverlay"><div class="modal"><button class="close" onclick="closeSearch()">×</button><h2>Buscar</h2><input autofocus placeholder="O que você procura?"></div></div>
+<div class="overlay" id="cartOverlay"><div class="modal"><button class="close" onclick="closeCart()">×</button><h2>Seu carrinho</h2><p id="cartText">Seu carrinho está vazio.</p><button class="btn" onclick="closeCart()">CONTINUAR COMPRANDO</button></div></div>
+<script src="script.js"></script>
+</body></html>
